@@ -1,172 +1,258 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Promo - Cone Sinalizador</title>
+    <title>Cone Sinalizador Profissional - Oferta Exclusiva 50% OFF</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* ANIMAÇÃO ATUALIZADA PARA PULSO VERDE */
         @keyframes pulse-grow {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-            }
-            50% {
-                transform: scale(1.08);
-                box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
-            }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
         }
-        
-        .pulse-button {
-            animation: pulse-grow 1.5s infinite;
-        }
+        .pulse-button-cta { animation: pulse-grow 1.5s infinite; }
         
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        .fade-in {
-            animation: fadeIn 0.8s ease-out;
-        }
-        
+        .fade-in-up { animation: fadeIn 1s ease-out forwards; }
+
         body {
-            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
+            background-color: #111827; /* Fundo principal dark */
+            font-family: 'Inter', sans-serif; /* Fonte mais moderna */
         }
-
-        .product-image {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        @media (max-width: 640px) {
-            .pulse-button {
-                font-size: 1.25rem;
-                padding: 1.25rem 2rem;
-            }
-        }
+        /* Adicionando suporte para a fonte Inter do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-2 sm:p-4">
-    <div class="max-w-md w-full fade-in">
-        <!-- Container Principal -->
-        <div class="bg-gradient-to-b from-amber-400 to-amber-500 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden">
-            
-            <!-- Imagem do Produto -->
-            <div class="relative">
-                <img 
-                    src="img.jpg" 
-                    alt="Cone Sinalizador - Super Promo 50% OFF"
-                    class="product-image"
-                    id="productImage"
-                >
+<body class="text-gray-200">
+
+    <!-- HERO SECTION -->
+    <section class="bg-gray-900 pt-12 pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in-up">
+                <div class="inline-block bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4 animate-pulse">
+                    🔥 OFERTA TERMINA HOJE!
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                    O Cone de Sinalização <span class="text-amber-400">Definitivo</span> para Sua Segurança
+                </h1>
+                <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-8">
+                    Garanta máxima visibilidade e resistência. Homologado pelas normas do CONTRAN. Perfeito para obras, eventos e rodovias.
+                </p>
             </div>
             
-            <!-- Seção Inferior Branca -->
-            <div class="bg-white px-4 py-6 sm:px-6 sm:py-8">
-                
-                <!-- Botão de Compra Principal -->
-                <button 
-                    onclick="comprarAgora()"
-                    class="pulse-button w-full bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold text-xl sm:text-2xl py-4 sm:py-5 px-8 rounded-full transition-all duration-200 uppercase tracking-wide shadow-xl flex items-center justify-center gap-3"
-                >
-                    <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
-                    </svg>
-                    Comprar Agora
-                </button>
-                
-                <!-- Lista de Benefícios -->
-                <div class="mt-5 space-y-3">
-                    <div class="flex items-center gap-3">
-                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <span class="text-gray-700 font-medium text-sm sm:text-base">Entrega Rápida em Todo Brasil</span>
-                    </div>
-                    
-                    <div class="flex items-center gap-3">
-                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <span class="text-gray-700 font-medium text-sm sm:text-base">Pagamento Seguro</span>
-                    </div>
-                    
-                    <div class="flex items-center gap-3">
-                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <span class="text-gray-700 font-medium text-sm sm:text-base">Garantia de Satisfação</span>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <!-- Imagem do Produto -->
+                <div class="fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl shadow-2xl p-2">
+                        <img src="img.jpg" alt="Cone Sinalizador em destaque" class="w-full h-auto rounded-xl">
                     </div>
                 </div>
-                
-                <!-- Alerta de Urgência -->
-                <div class="mt-5 bg-red-50 border-2 border-red-300 rounded-xl p-4 text-center">
-                    <div class="flex items-center justify-center gap-2 mb-1">
-                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                        </svg>
-                        <span class="text-red-600 font-bold text-base sm:text-lg">PROMOÇÃO POR TEMPO LIMITADO</span>
+
+                <!-- Card de Oferta -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col fade-in-up" style="animation-delay: 0.4s;">
+                    <h2 class="text-xl font-bold text-white mb-1">Oferta Exclusiva Online</h2>
+                    <p class="text-green-400 font-semibold text-2xl mb-4">Aproveite 50% de Desconto!</p>
+                    
+                    <!-- Seção de Preços -->
+                    <div class="bg-gray-900/50 rounded-lg p-4 mb-5">
+                        <div class="flex items-center justify-between">
+                            <div class="text-left">
+                                <span class="block text-gray-400 text-sm">De R$ 69,98</span>
+                                <span class="text-white text-4xl font-bold">Por R$ 34,99</span>
+                            </div>
+                            <div class="bg-yellow-400 text-gray-900 font-bold py-1 px-3 rounded-full text-sm">
+                                -50%
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-red-500 text-xs sm:text-sm">
-                        Aproveite enquanto ainda temos estoque disponível!
-                    </p>
+                
+                    <!-- Botão CTA com Animação -->
+                    <a href="https://api.whatsapp.com/send/?phone=5541984607052&text=Ol%C3%A1%21+Tenho+interesse+no+Cone+Sinalizador+da+promo%C3%A7%C3%A3o+por+R%24+34%2C99+e+gostaria+de+finalizar+a+compra%21&type=phone_number&app_absent=0" class="pulse-button-cta w-full block bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-3 px-6 rounded-lg text-center shadow-lg transition-all transform hover:scale-105">
+                        <span class="flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+                            QUERO APROVEITAR A OFERTA
+                        </span>
+                    </a>
+                    
+                    <!-- Garantias -->
+                    <div class="mt-6 space-y-2 text-sm text-gray-400">
+                        <div class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Compra 100% Segura</div>
+                        <div class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Garantia de Satisfação</div>
+                        <div class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Entrega para todo Brasil</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- BENEFÍCIOS -->
+    <section class="bg-gray-800 py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Por Que Este é o Melhor Cone Para Você?</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Desenvolvido para máxima segurança e durabilidade, nosso cone atende às mais altas exigências do mercado.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Benefício 1 -->
+                <div class="bg-gray-900 p-8 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
+                    <div class="bg-yellow-500 w-16 h-16 rounded-full flex items-center justify-center mb-5 mx-auto">
+                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Visibilidade Incomparável</h3>
+                    <p class="text-gray-400">Com faixas refletivas de alta intensidade, garante a visualização por motoristas a longas distâncias, de dia ou de noite, sob qualquer clima.</p>
+                </div>
+                <!-- Benefício 2 -->
+                <div class="bg-gray-900 p-8 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
+                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-5 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Durabilidade Extrema</h3>
+                    <p class="text-gray-400">Fabricado em PVC flexível de alta densidade, resiste a atropelamentos, ventos fortes e exposição ao sol, voltando sempre à sua forma original.</p>
+                </div>
+                <!-- Benefício 3 -->
+                <div class="bg-gray-900 p-8 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mb-5 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Totalmente Regulamentado</h3>
+                    <p class="text-gray-400">Certificado e em conformidade com as normas ABNT e CONTRAN, garantindo sua validade legal para qualquer tipo de sinalização viária.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ESPECIFICAÇÕES -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Ficha Técnica Completa</h2>
+            <div class="bg-gray-800 rounded-xl p-8">
+                <ul class="space-y-4">
+                    <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span><div><strong class="text-white">Altura:</strong> 75cm (Padrão Oficial)</div></li>
+                    <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span><div><strong class="text-white">Material:</strong> PVC flexível com proteção UV</div></li>
+                    <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span><div><strong class="text-white">Faixas Refletivas:</strong> 2 faixas de alta luminância</div></li>
+                    <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span><div><strong class="text-white">Base:</strong> Base quadrada para máxima estabilidade</div></li>
+                    <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span><div><strong class="text-white">Certificação:</strong> Aprovado pela ABNT NBR 15071</div></li>
+                    <li class="flex items-start"><span class="text-green-400 mr-3 text-xl">✓</span><div><strong class="text-white">Garantia:</strong> 3 meses contra defeitos de fabricação</div></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- DEPOIMENTOS -->
+    <section class="bg-gray-900 py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Quem Comprou, Recomenda!</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="text-yellow-400 text-2xl mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-300 mb-4 italic">"Qualidade impressionante. Muito superior aos que eu usava antes. Resistente e a visibilidade noturna é fantástica."</p>
+                    <div>
+                        <p class="text-white font-bold">Carlos F. Pereira</p>
+                        <p class="text-gray-500 text-sm">Engenheiro Civil</p>
+                    </div>
+                </div>
+                 <!-- Depoimento 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="text-yellow-400 text-2xl mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-300 mb-4 italic">"Chegou muito rápido e bem embalado. O material é flexível e parece que vai durar uma vida. Comprarei mais com certeza."</p>
+                    <div>
+                        <p class="text-white font-bold">Juliana Martins</p>
+                        <p class="text-gray-500 text-sm">Síndica Profissional</p>
+                    </div>
+                </div>
+                 <!-- Depoimento 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="text-yellow-400 text-2xl mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-300 mb-4 italic">"O melhor custo-benefício que encontrei depois de muita pesquisa. Aprovado para uso em nosso estacionamento."</p>
+                    <div>
+                        <p class="text-white font-bold">Roberto Almeida</p>
+                        <p class="text-gray-500 text-sm">Gerente de Estacionamento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="comprar" class="bg-gradient-to-br from-amber-500 via-orange-500 to-red-600 py-16 sm:py-20">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Última Chance Para Comprar com Desconto</h2>
+            <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+                A segurança não pode esperar. Esta oferta de 50% OFF é por tempo limitado. Não perca!
+            </p>
+    
+            <!-- Card de Preço Final -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-md mx-auto">
+                <div class="flex items-center justify-center gap-4">
+                    <span class="text-white/70 text-2xl line-through">R$ 69,98</span>
+                    <span class="text-white text-5xl md:text-6xl font-bold">R$ 34,99</span>
+                </div>
+            </div>
+    
+            <!-- Botão CTA Final -->
+            <button onclick="comprarAgora()" 
+                    class="pulse-button-cta bg-green-500 hover:bg-green-600 text-white font-bold text-xl py-4 px-8 rounded-full shadow-2xl inline-flex items-center gap-3 transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-400/50">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                </svg>
+                COMPRAR AGORA COM 50% OFF
+            </button>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="bg-gray-800 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Perguntas Frequentes (FAQ)</h2>
+            <div class="space-y-4">
+                <details class="bg-gray-900 p-6 rounded-lg group">
+                    <summary class="font-semibold text-lg text-white cursor-pointer list-none flex justify-between items-center">
+                        O produto tem garantia?
+                        <span class="group-open:rotate-180 transition-transform">-</span>
+                    </summary>
+                    <p class="text-gray-400 mt-4">Sim! Oferecemos 3 meses de garantia total contra qualquer defeito de fabricação. Sua satisfação ou seu dinheiro de volta.</p>
+                </details>
+                <details class="bg-gray-900 p-6 rounded-lg group">
+                    <summary class="font-semibold text-lg text-white cursor-pointer list-none flex justify-between items-center">
+                        Quais são as formas de pagamento?
+                        <span class="group-open:rotate-180 transition-transform">-</span>
+                    </summary>
+                    <p class="text-gray-400 mt-4">Aceitamos PIX, boleto bancário e todos os principais cartões de crédito, com parcelamento em até 12x.</p>
+                </details>
+                 <details class="bg-gray-900 p-6 rounded-lg group">
+                    <summary class="font-semibold text-lg text-white cursor-pointer list-none flex justify-between items-center">
+                        Qual o prazo de entrega?
+                        <span class="group-open:rotate-180 transition-transform">-</span>
+                    </summary>
+                    <p class="text-gray-400 mt-4">O prazo de entrega varia de 5 a 15 dias úteis, dependendo da sua localidade. Você receberá um código de rastreio para acompanhar seu pedido.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2025 Cone Sinalizador. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Um ambiente de compra seguro e protegido.</p>
+        </div>
+    </footer>
+    
+    <!-- SCRIPT -->
     <script>
         function comprarAgora() {
-            // Configuração do WhatsApp
-            const numeroWhatsApp = '5541984607052'; // SUBSTITUA pelo seu número com DDI+DDD
-            const mensagem = 'Olá! Tenho interesse no Cone Sinalizador da Super Promoção!';
-            
-            // Detecta se é iOS/iPhone
-            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-            
-            if (isIOS) {
-                // Para iPhone: usa api.whatsapp.com que funciona melhor
-                const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
-                window.location.href = url; // Redireciona na mesma aba
-            } else {
-                // Para Android e Desktop: usa wa.me
-                const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
-                window.open(url, '_blank');
-            }
-            
-            // Opcional: Redirecionar para página de checkout
-            // window.location.href = 'https://seusite.com/checkout';
+            // SUBSTITUA pelo seu número com DDI+DDD (ex: 5511999999999)
+            const numeroWhatsApp = '5541984607052'; 
+            const mensagem = 'Olá! Tenho interesse no Cone Sinalizador da promoção por R$ 34,99 e gostaria de finalizar a compra!';
+            const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
         }
-        
-        // Efeito de clique no botão
-        document.querySelector('.pulse-button').addEventListener('mousedown', function() {
-            this.style.transform = 'scale(0.95)';
-        });
-        
-        document.querySelector('.pulse-button').addEventListener('mouseup', function() {
-            this.style.transform = 'scale(1)';
-        });
-        
-        document.querySelector('.pulse-button').addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
     </script>
 </body>
 </html>
