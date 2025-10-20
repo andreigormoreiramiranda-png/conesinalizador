@@ -135,12 +135,21 @@
     <script>
         function comprarAgora() {
             // Configuração do WhatsApp
-            const numeroWhatsApp = '5541987454606'; // SUBSTITUA pelo seu número com DDI+DDD
-            const mensagem = 'Olá! Tenho interesse no Cone Sinalizador da Super Promoção! 🚦';
-            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+            const numeroWhatsApp = '5541984607052'; // SUBSTITUA pelo seu número com DDI+DDD
+            const mensagem = 'Olá! Tenho interesse no Cone Sinalizador da Super Promoção!';
             
-            // Abre o WhatsApp em nova aba
-            window.open(url, '_blank');
+            // Detecta se é iOS/iPhone
+            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            
+            if (isIOS) {
+                // Para iPhone: usa api.whatsapp.com que funciona melhor
+                const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
+                window.location.href = url; // Redireciona na mesma aba
+            } else {
+                // Para Android e Desktop: usa wa.me
+                const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+                window.open(url, '_blank');
+            }
             
             // Opcional: Redirecionar para página de checkout
             // window.location.href = 'https://seusite.com/checkout';
